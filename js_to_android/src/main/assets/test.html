@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title></title>
+    <script type="text/javascript">
+        function callAndroidInterface() {
+        window.javaInterface.clickOnAndroid();
+        }
+        function showTitle(param) {
+        alert("传参："+param);
+        var x = document.getElementById("title");
+        alert("标题："+x.innerHTML);
+        }
+    </script>
+</head>
+    <body>
+        <h3 id="title">关于安卓与JavaScript的交互</h3>
+        <input type="button" value="调用接口1" onclick="callAndroidInterface()"/>
+        <input type="button" value="测试接口可用性" onclick="showTitle('aa')"/>
+        <input type="button" value="调用接口2" onclick="window.javaInterface.call()"/>
+    </body>
+</html>
