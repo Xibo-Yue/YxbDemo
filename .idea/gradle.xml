@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/js_to_android" />
             <option value="$PROJECT_DIR$/jsoup_data" />
+            <option value="$PROJECT_DIR$/selection_drawable" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
