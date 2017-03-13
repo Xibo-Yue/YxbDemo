@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>demo示例</title>
+    <script src="js/sewisePlayer/sewise.player.min.js"></script>
+</head>
+<body>
+<div id="videoPlay"></div>
+<script>
+       SewisePlayer.setup({
+             server: 'vod',
+             type: 'm3u8',
+             autostart: 'true',    /*是否自动播放*/
+             poster: 'http://hlscdn.lechange.cn/LCO/2D02BD7PAK00825/0/0/20170311105414/dev_20170311105414_0ckh6s9kp1ch8tg3.jpg',    /*此处可填写封面地址*/
+             videourl: 'http://hlscdn.lechange.cn/LCO/2D02BD7PAK00825/0/0/20170311105414/dev_20170311105414_0ckh6s9kp1ch8tg3.m3u8',    /*此处填写购买获取到的m3u8地址 必填*/
+             skin: 'vodOrange',
+             title: 'demo示例',
+             claritybutton: 'disable',
+             lang: 'zh_CN'
+           },'videoPlay');
+</script>
+</body>
+</html>
