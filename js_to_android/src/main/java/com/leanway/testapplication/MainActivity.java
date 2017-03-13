@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         public void showToast(String toast) {
             Toast.makeText(MainActivity.this, toast, Toast.LENGTH_SHORT).show();
             Log.d("html", "show toast success");
+            startActivity(new Intent(MainActivity.this,VideoMonitorActivity.class));
         }
 
         public void log(final String msg) {
@@ -87,5 +88,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }
