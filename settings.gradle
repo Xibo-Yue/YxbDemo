@@ -1,1 +1,1 @@
-include ':js_to_android', ':jsoup_data', ':selection_drawable', ':greendao', ':video_player'
+include ':js_to_android', ':jsoup_data', ':selection_drawable', ':greendao', ':video_player', ':timepickdia'
