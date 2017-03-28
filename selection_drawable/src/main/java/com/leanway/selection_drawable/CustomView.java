@@ -26,7 +26,6 @@ public class CustomView extends View   /*extends Button*/
     public CustomView(Context context)
     {
         super(context);
-        // TODO Auto-generated constructor stub
         mContext = context;
         initStateListDrawable(); // 初始化图片资源
     }
