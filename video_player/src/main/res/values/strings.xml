@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">video_player</string>
+    <string name="video_data">{
+                "resource": "http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4",
+                "adid": "00000001112",
+                "clickUrl": "http://www.imooc.com/",
+                "clickMonitor": [
+                    {
+                        "ver": "0",
+                        "url": "http://imooc.com/click??click=1"
+                    },
+                    {
+                        "ver": "0",
+                        "url": "http://imooc.com/click?click=2"
+                    }
+                ],
+                "startMonitor": [
+                    {
+                        "ver": "0",
+                        "url": "http://imooc.com/show?impression=1"
+                    },
+                    {
+                        "ver": "0",
+                        "url": "http: //imooc.com/show?impression=2"
+                    }
+                ],
+                "middleMonitor": [
+                    {
+                        "ver": "0",
+                        "url": "http://imooc.com/show?SU=1",
+                        "time": 5
+                    },
+                    {
+                        "ver": "0",
+                        "url": "http: //imooc.com/show?impression=2",
+                        "time": 5
+                    }
+                ],
+                "endMonitor": [
+                    {
+                        "ver": "0",
+                        "url": "http://imooc.com/show?end=1",
+                        "time": 5
+                    },
+                    {
+                        "ver": "0",
+                        "url": "http: //imooc.com/show?end=2",
+                        "time": 5
+                    }
+                ]
+            }
+        }</string>
+</resources>
