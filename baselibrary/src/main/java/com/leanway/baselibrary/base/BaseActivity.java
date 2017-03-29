@@ -8,7 +8,6 @@ import android.view.View;
 
 import com.leanway.baselibrary.utils.DialogHelp;
 import com.leanway.baselibrary.utils.TDevice;
-import com.umeng.analytics.MobclickAgent;
 
 
 /**
@@ -47,7 +46,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
+        //MobclickAgent.onPause(this);
         if (this.isFinishing()){
             TDevice.hideSoftKeyboard(getCurrentFocus());
         }
@@ -56,7 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
+        //MobclickAgent.onResume(this);
     }
 
     @Override

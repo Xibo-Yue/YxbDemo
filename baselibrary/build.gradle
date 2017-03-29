@@ -46,5 +46,5 @@ dependencies {
     compile files('libs/jackson-annotations-2.2.3.jar')
     compile files('libs/jackson-core-2.2.3 .jar')
     //友盟统计
-    compile 'com.umeng.analytics:analytics:latest.integration'
+    //compile 'com.umeng.analytics:analytics:latest.integration'
 }
