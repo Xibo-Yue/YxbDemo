@@ -14,6 +14,7 @@ public class AppManager {
     private static AppManager instance;
 
     private AppManager() {
+
     }
 
     /**
