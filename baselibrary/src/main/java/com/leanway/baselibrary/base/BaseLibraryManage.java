@@ -3,7 +3,7 @@ package com.leanway.baselibrary.base;
 import android.app.Application;
 import android.content.Context;
 
-import com.leanway.baselibrary.okhttp.OKHttpManager;
+import com.leanway.baselibrary.okhttp_hy.OKHttpManager;
 
 /**
  * @author Xibo_Yue
