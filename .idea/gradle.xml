@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/custom_webview" />
             <option value="$PROJECT_DIR$/greendao" />
             <option value="$PROJECT_DIR$/js_to_android" />
             <option value="$PROJECT_DIR$/jsoup_data" />
