@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YxbDemo.iml" filepath="$PROJECT_DIR$/YxbDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_dialog/common_dialog.iml" filepath="$PROJECT_DIR$/common_dialog/common_dialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/custom_webview/custom_webview.iml" filepath="$PROJECT_DIR$/custom_webview/custom_webview.iml" />
       <module fileurl="file://$PROJECT_DIR$/greendao/greendao.iml" filepath="$PROJECT_DIR$/greendao/greendao.iml" />
       <module fileurl="file://$PROJECT_DIR$/js_to_android/js_to_android.iml" filepath="$PROJECT_DIR$/js_to_android/js_to_android.iml" />
