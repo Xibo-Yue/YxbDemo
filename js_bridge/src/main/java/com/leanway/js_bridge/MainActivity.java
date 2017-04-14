@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-         * js发送给按住消息   submitFromWeb 是js调用的方法名    安卓\返回给js
+         * js发送给安卓消息   submitFromWeb 是js调用的方法名    安卓\返回给js
          */
         bridgeWebView.registerHandler("submitFromWeb", new BridgeHandler() {
             @Override
