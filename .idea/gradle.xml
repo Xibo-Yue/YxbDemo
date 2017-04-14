@@ -15,7 +15,6 @@
             <option value="$PROJECT_DIR$/js_to_android" />
             <option value="$PROJECT_DIR$/jsoup_data" />
             <option value="$PROJECT_DIR$/timepickdia" />
-            <option value="$PROJECT_DIR$/video_player" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

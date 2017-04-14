@@ -10,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/js_to_android/js_to_android.iml" filepath="$PROJECT_DIR$/js_to_android/js_to_android.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup_data/jsoup_data.iml" filepath="$PROJECT_DIR$/jsoup_data/jsoup_data.iml" />
       <module fileurl="file://$PROJECT_DIR$/timepickdia/timepickdia.iml" filepath="$PROJECT_DIR$/timepickdia/timepickdia.iml" />
-      <module fileurl="file://$PROJECT_DIR$/video_player/video_player.iml" filepath="$PROJECT_DIR$/video_player/video_player.iml" />
     </modules>
   </component>
 </project>
