@@ -1,4 +1,3 @@
- <script>
 
         function testDiv() {
             document.getElementById("show").innerHTML = document.getElementsByTagName("html")[0].innerHTML;
@@ -68,4 +67,3 @@
                 responseCallback(responseData);
             });
         })
-    </script>
