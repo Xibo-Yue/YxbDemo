@@ -22,18 +22,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("JsBridge_test");
+        //getSupportActionBar().setTitle("JsBridge_test");
 
         button = (Button) findViewById(R.id.button3);
-
         bridgeWebView = (BridgeWebView) findViewById(R.id.JsBridgeWebView);
 
+
         bridgeWebView.setDefaultHandler(new DefaultHandler());
-
         bridgeWebView.setWebChromeClient(new WebChromeClient());
-
         bridgeWebView.setWebViewClient( new MyWebViewClient(bridgeWebView));
-
         bridgeWebView.loadUrl("file:///android_asset/test.html");
 
 
@@ -46,14 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 //显示接收的消息
                 showToast(data);
                 //返回给html的消息
-                function.onCallBack( "返回给Toast的alert");
+                //function.onCallBack( "返回给Toast的alert");
             }
         });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 /**
                  * 给Html发消息   js接收并返回data
                  */
