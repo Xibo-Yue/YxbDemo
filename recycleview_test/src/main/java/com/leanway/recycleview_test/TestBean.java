@@ -10,17 +10,27 @@ public class TestBean {
     private String age;
     private String city;
     private String idCode;
+    private boolean isCheck;
 
 
-    public TestBean(String name, String age, String city, String idCode) {
+    public TestBean(String name, String age, String city, String idCode,boolean isCheck) {
         this.name = name;
         this.age = age;
         this.city = city;
         this.idCode = idCode;
+        this.isCheck = isCheck;
     }
 
     public String getName() {
         return name;
+    }
+
+    public boolean isCheck() {
+        return isCheck;
+    }
+
+    public void setCheck(boolean check) {
+        isCheck = check;
     }
 
     public void setName(String name) {
