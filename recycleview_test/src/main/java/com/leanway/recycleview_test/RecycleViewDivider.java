@@ -43,7 +43,6 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
 
     /**
      * 自定义分割线
-     *
      * @param context
      * @param orientation 列表方向
      * @param drawableId  分割线图片
@@ -56,7 +55,6 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
 
     /**
      * 自定义分割线
-     *
      * @param context
      * @param orientation   列表方向
      * @param dividerHeight 分割线高度
@@ -69,7 +67,6 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
         mPaint.setColor(dividerColor);
         mPaint.setStyle(Paint.Style.FILL);
     }
-
 
     //获取分割线尺寸
     @Override

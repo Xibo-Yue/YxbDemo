@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         initData();
+        mRecyclerView.addItemDecoration(new RecycleViewDivider(MainActivity.this,LinearLayoutManager.HORIZONTAL));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-        mRecyclerView.addItemDecoration(new RecycleViewDivider(getApplicationContext(),LinearLayoutManager.VERTICAL,5));
         mRecyclerView.setAdapter(new TestAdapter(MainActivity.this, mTestBeens));
     }
 
