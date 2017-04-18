@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import com.leanway.recycleview_test.adapter.TestAdapter;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         initData();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        mRecyclerView.addItemDecoration(new RecycleViewDivider(getApplicationContext(),LinearLayoutManager.VERTICAL,5));
         mRecyclerView.setAdapter(new TestAdapter(MainActivity.this, mTestBeens));
     }
 
