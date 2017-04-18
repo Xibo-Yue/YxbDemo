@@ -3,6 +3,7 @@ package com.leanway.recycleview_test.holder;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class TestHolder extends BaseHolderRV<TestBean> implements View.OnClickLi
     private TextView cityTv;
     private TextView idcodeTv;
     private Context mContext;
+    private EditText mEditText;
 
     public TestHolder(Context context, ViewGroup parent, BaseAdapterRV<TestBean> adapter, int
             itemType) {
@@ -36,8 +38,10 @@ public class TestHolder extends BaseHolderRV<TestBean> implements View.OnClickLi
         ageTv = (TextView) itemView.findViewById(R.id.age_tv);
         cityTv = (TextView) itemView.findViewById(R.id.city_tv);
         idcodeTv = (TextView) itemView.findViewById(R.id.idcode_tv);
+        mEditText = (EditText) itemView.findViewById(R.id.input_ed);
         nameTv.setOnClickListener(this);
         ageTv.setOnClickListener(this);
+        mEditText.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +67,9 @@ public class TestHolder extends BaseHolderRV<TestBean> implements View.OnClickLi
                 break;
             case R.id.age_tv:
                 Toast.makeText(mContext,bean.getAge()+"位置"+position,Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.input_ed:
+
                 break;
         }
     }

@@ -6,6 +6,12 @@
     android:descendantFocusability="blocksDescendants"
     android:orientation="horizontal">
 
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/cb_box"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
     <TextView
         android:gravity="center"
         android:id="@+id/name_tv"
@@ -34,5 +40,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="test"/>
-
+    <EditText
+        android:gravity="center"
+        android:id="@+id/input_ed"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
 </LinearLayout>
