@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         mTestBeens = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            mTestBeens.add(new TestBean("张三"+i,19+i+"","上海"+i,"123"+i,false));
+            mTestBeens.add(new TestBean("李四"+i,19+i+"","北京"+i,"123"+i,false));
         }
     }
 }
