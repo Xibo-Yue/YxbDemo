@@ -18,6 +18,9 @@ public class Item
 		addItem(new Item("4", "Item 4"));
 		addItem(new Item("5", "Item 5"));
 		addItem(new Item("6", "Item 6"));
+		addItem(new Item("7", "Item 7"));
+		addItem(new Item("8", "Item 8"));
+		addItem(new Item("9", "Item 9"));
 	}
 
 	private static void addItem(Item item)
