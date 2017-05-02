@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,33 +30,22 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);//当不需要动态计算item高度时，需要加上这句话
 
 
-        mRecyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(layoutManager) {
-            @Override
-            public void onLoadMore(int currentPage) {
-                Log.i("page", currentPage+"");
-                simulateLoadMoreData();
-            }
-        });
-
-
-
-
 
 
         recyclerAdapter.setItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_LONG).show();
+                ToastUtil.show(getApplication(),position+"");
             }
 
             @Override
             public void onItemLongClick(View view, int position) {
-                Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_LONG).show();
+                ToastUtil.show(getApplication(),position+"");
             }
 
             @Override
             public void onItemSubViewClick(View view, int position) {
-                Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_LONG).show();
+                ToastUtil.show(getApplication(),position+"");
             }
         });
         mRecyclerView.setAdapter(recyclerAdapter);
@@ -70,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
      * 加载更多
      */
     private void simulateLoadMoreData() {
-        Toast.makeText(getApplicationContext(),"加载更多",Toast.LENGTH_SHORT).show();
+        ToastUtil.show(getApplication(),"加载更多");
     }
 
     private void initData() {
