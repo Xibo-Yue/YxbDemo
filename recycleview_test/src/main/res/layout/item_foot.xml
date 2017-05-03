@@ -2,42 +2,42 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="40dp"
     android:descendantFocusability="blocksDescendants"
     android:orientation="horizontal">
 
     <CheckBox
         android:gravity="center"
-        android:id="@+id/cb_box"
+        android:id="@+id/cb_box_top"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"/>
     <TextView
         android:gravity="center"
-        android:id="@+id/name_tv"
+        android:id="@+id/name_tv_top"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="test"/>
+        android:text="姓名"/>
     <TextView
         android:gravity="center"
         android:id="@+id/age_tv"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="test"/>
+        android:text="年龄"/>
     <TextView
         android:gravity="center"
         android:id="@+id/city_tv"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="test"/>
+        android:text="城市"/>
     <TextView
         android:gravity="center"
         android:id="@+id/idcode_tv"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="test"/>
+        android:text="号码"/>
 </LinearLayout>

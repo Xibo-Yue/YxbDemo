@@ -1,6 +1,7 @@
 package com.leanway.recycleview_test;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,8 +53,9 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 //        ViewGroup.LayoutParams params = holder.itemView.getLayoutParams();
 //        params.height = height.get(position);//把随机的高度赋予item布局
 //        holder.itemView.setLayoutParams(params);//把params设置item布局
-
         holder.nameTv.setText(mDatas.get(position).getName());
+        holder.nameTv.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+        holder.nameTv.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG |Paint.ANTI_ALIAS_FLAG);
         holder.ageTv.setText(mDatas.get(position).getAge());
         holder.cityTv.setText(mDatas.get(position).getCity());
         holder.idcodeTv.setText(mDatas.get(position).getIdCode());
@@ -92,16 +94,48 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
             cityTv = (TextView) view.findViewById(R.id.city_tv);
             idcodeTv = (TextView) view.findViewById(R.id.idcode_tv);
 
+            //姓名点击事件
+            nameTv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (itemClickListener != null) {
+                        itemClickListener.onItemSubViewClick((TextView) v,getPosition());
+                    }
+                }
+            });
+
+            //CheckBox点击事件
+//            mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    if (itemClickListener != null) {
+//                        itemClickListener.onItemCheckBoxClick((CheckBox) buttonView,getPosition(),isChecked);
+//                    }
+//                }
+//            });
+
+            mCheckBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (itemClickListener != null) {
+                        itemClickListener.onItemCheckBoxClick(getPosition(),((CheckBox) v).isChecked());
+                    }
+                }
+            });
+
+
 
             //为item添加普通点击回调
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (itemClickListener != null) {
-                        itemClickListener.onItemClick(view, getPosition());
+                        //itemClickListener.onItemClick(view, getPosition());
+                        itemClickListener.onItemCheckBoxClick(getPosition(),!mDatas.get(getPosition()).isCheck());
                     }
                 }
             });
+
             //为item添加长按回调
             view.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

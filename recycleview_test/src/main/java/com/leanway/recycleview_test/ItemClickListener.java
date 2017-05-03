@@ -1,6 +1,7 @@
 package com.leanway.recycleview_test;
 
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * @author Xibo_Yue
@@ -23,5 +24,9 @@ public interface ItemClickListener {
      * @param view
      * @param position
      */
-    public void onItemSubViewClick(View view,int position);
+    public void onItemSubViewClick(TextView view, int position);
+
+
+
+    public void onItemCheckBoxClick(int position,boolean isCheck);
 }
