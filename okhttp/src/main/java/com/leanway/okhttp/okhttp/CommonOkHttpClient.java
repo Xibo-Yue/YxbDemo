@@ -6,6 +6,7 @@ import com.leanway.okhttp.okhttp.https.HttpsUtils;
 import com.leanway.okhttp.okhttp.listener.DisposeDataHandle;
 import com.leanway.okhttp.okhttp.response.CommonFileCallback;
 import com.leanway.okhttp.okhttp.response.CommonJsonCallback;
+import com.leanway.okhttp.okhttp.response.CommonUploadFileCallback;
 import com.leanway.okhttp.okhttp.response.SyncJsonCallback;
 
 import java.io.IOException;
@@ -178,9 +179,7 @@ public class CommonOkHttpClient {
      */
     public static Call uploadFile(Request request, DisposeDataHandle handle) {
         Call call = mOkHttpClient.newCall(request);
-        call.enqueue(new CommonJsonCallback(handle));
+        call.enqueue(new CommonUploadFileCallback(handle));
         return call;
     }
-
-
 }

@@ -63,13 +63,4 @@ public class RequestCenter {
         CommonOkHttpClient.uploadFile(CommonRequest.
                 createMultiPostRequest(url, params), new DisposeDataHandle(listener));
     }
-
-
-    public static void postUploadFile(String url, RequestParams params,DisposeDataListener listener) {
-        RequestParams headers = new RequestParams();
-
-        CommonOkHttpClient.post(CommonRequest.
-                createPostRequest(url, params), new DisposeDataHandle(listener));
-    }
-
 }

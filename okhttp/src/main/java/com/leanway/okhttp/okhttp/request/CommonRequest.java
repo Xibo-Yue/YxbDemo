@@ -123,13 +123,11 @@ public class CommonRequest {
         MultipartBody.Builder requestBody = new MultipartBody.Builder();
         requestBody.setType(MultipartBody.FORM);
         if (params != null) {
-
             for (Map.Entry<String, Object> entry : params.fileParams.entrySet()) {
                 if (entry.getValue() instanceof File) {
-                    requestBody.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + entry.getKey() + "\""),
+                    requestBody.addFormDataPart("filename",((File) entry.getValue()).getName(),
                             RequestBody.create(FILE_TYPE, (File) entry.getValue()));
                 } else if (entry.getValue() instanceof String) {
-
                     requestBody.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + entry.getKey() + "\""),
                             RequestBody.create(null, (String) entry.getValue()));
                 }
