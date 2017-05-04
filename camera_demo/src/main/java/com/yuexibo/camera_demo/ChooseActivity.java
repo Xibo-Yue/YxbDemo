@@ -1,6 +1,8 @@
 package com.yuexibo.camera_demo;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,9 +11,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.GridView;
 
+import com.leanway.okhttp.okhttp.request.RequestParams;
 import com.yuexibo.camera_demo.adapter.UploadImageAdapter;
 import com.yuexibo.camera_demo.utils.ImageUtils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
 
@@ -38,7 +43,22 @@ public class ChooseActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(ChooseActivity.this,ChooseFragmentActivity.class));
+				//startActivity(new Intent(ChooseActivity.this,ChooseFragmentActivity.class));
+				try {
+
+					String uploadUrl = "http://192.168.11.166/lnmes/template?method=uploadQcImg";
+
+					FileInputStream fis = new FileInputStream(dataList.get(0));
+					Bitmap bitmap  = BitmapFactory.decodeStream(fis);
+					byte[] bytes = ImageUtils.getBitmapByte(bitmap);
+					RequestParams params = new RequestParams();
+
+
+
+
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		uploadGridView = (GridView) findViewById(R.id.grid_upload_pictures);

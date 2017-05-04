@@ -9,6 +9,9 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
 /**
  * 图片简单处理工具类
  */
@@ -94,6 +97,26 @@ public class ImageUtils {
 				ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
 		}
 		return bitmap;
+	}
+
+
+
+	/**
+	 * 图片转成二进制流
+	 * @param bitmap
+	 * @return
+	 */
+	public static byte[] getBitmapByte(Bitmap bitmap){
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		//参数1转换类型，参数2压缩质量，参数3字节流资源
+		bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+		try {
+			out.flush();
+			out.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return out.toByteArray();
 	}
 
 }

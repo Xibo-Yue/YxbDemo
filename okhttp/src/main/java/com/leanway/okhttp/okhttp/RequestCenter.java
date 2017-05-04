@@ -52,4 +52,24 @@ public class RequestCenter {
                 createGetRequest(url, params), new DisposeDataHandle(listener,clazz));
     }
 
+
+    /**
+     * 文件上传
+     * @param url
+     * @param params
+     * @param listener
+     */
+    public static void uploadFile(String url, RequestParams params,DisposeDataListener listener) {
+        CommonOkHttpClient.uploadFile(CommonRequest.
+                createMultiPostRequest(url, params), new DisposeDataHandle(listener));
+    }
+
+
+    public static void postUploadFile(String url, RequestParams params,DisposeDataListener listener) {
+        RequestParams headers = new RequestParams();
+
+        CommonOkHttpClient.post(CommonRequest.
+                createPostRequest(url, params), new DisposeDataHandle(listener));
+    }
+
 }

@@ -26,7 +26,7 @@ import okhttp3.Response;
  * @function 用来发送get, post请求的工具类，包括设置一些请求的共用参数
  */
 public class CommonOkHttpClient {
-    private static final int TIME_OUT = 10;  //普通请求超时时间
+    private static final int TIME_OUT = 20;  //普通请求超时时间
 
 
     private static final int QTIME_OUT = 2;  //检查版本号的超时时间
@@ -169,4 +169,18 @@ public class CommonOkHttpClient {
         call.enqueue(new CommonFileCallback(handle));
         return call;
     }
+
+    /**
+     * 文件上传
+     * @param request
+     * @param handle
+     * @return
+     */
+    public static Call uploadFile(Request request, DisposeDataHandle handle) {
+        Call call = mOkHttpClient.newCall(request);
+        call.enqueue(new CommonJsonCallback(handle));
+        return call;
+    }
+
+
 }
