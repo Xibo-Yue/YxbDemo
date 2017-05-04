@@ -69,7 +69,7 @@ public class HttpUtil {
         URL url = new URL(urlString);
         URLConnection connection = url.openConnection();
         connection.setDoOutput(true);
-        connection.setRequestProperty("content-type","multipart/form-data;boundary=1321ZnGpDtePMx0KrHh_G0X99Yef9r8JZsRJSXC");
+        //connection.setRequestProperty("content-type","multipart/form-data;boundary=1321ZnGpDtePMx0KrHh_G0X99Yef9r8JZsRJSXC");
         //try里面拿到输出流，输出端就是服务器端
         try (BufferedOutputStream bos = new BufferedOutputStream(connection.getOutputStream())) {
             InputStream is = new FileInputStream(imagUrl);
