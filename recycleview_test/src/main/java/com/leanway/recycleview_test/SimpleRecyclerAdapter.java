@@ -130,8 +130,8 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
                 @Override
                 public void onClick(View v) {
                     if (itemClickListener != null) {
-                        //itemClickListener.onItemClick(view, getPosition());
-                        itemClickListener.onItemCheckBoxClick(getPosition(),!mDatas.get(getPosition()).isCheck());
+                        itemClickListener.onItemClick(v, getPosition());
+                        //itemClickListener.onItemCheckBoxClick(getPosition(),!mDatas.get(getPosition()).isCheck());
                     }
                 }
             });
