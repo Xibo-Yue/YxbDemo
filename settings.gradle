@@ -1,1 +1,1 @@
-include ':js_to_android', ':jsoup_data', ':greendao', ':timepickdia', ':custom_webview', ':common_dialog', ':js_bridge', ':recycleview_test', ':eventbus_test', ':camera_demo', ':okhttp'
+include ':js_to_android', ':jsoup_data', ':greendao', ':timepickdia', ':custom_webview', ':common_dialog', ':js_bridge', ':recycleview_test', ':eventbus_test', ':camera_demo', ':okhttp', ':jni_demo'
