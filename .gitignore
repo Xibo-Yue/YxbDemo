@@ -10,3 +10,5 @@
 /.idea/
 /baselibrary/build/
 /okhttp/build/
+/.gradle/
+/build/
