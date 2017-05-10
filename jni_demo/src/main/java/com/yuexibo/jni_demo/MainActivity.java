@@ -1,9 +1,10 @@
 package com.yuexibo.jni_demo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         btn_java2c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String result = new Java2JNI().java2C();
+                Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
             }
         });
     }
