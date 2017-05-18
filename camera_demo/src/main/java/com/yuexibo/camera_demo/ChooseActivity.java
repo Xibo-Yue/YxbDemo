@@ -61,8 +61,13 @@ public class ChooseActivity extends BaseActivity {
             public void onClick(View v) {
                 //startActivity(new Intent(ChooseActivity.this,ChooseFragmentActivity.class));
                 try {
-                    //final String FILE_TYPE = "application/octet-stream";
-                    final String uploadUrl = "http://192.168.11.166/lnmes/template?method=uploadQcImg";
+
+                    if(!(dataList.size() > 1)){
+                        Toast.makeText(getApplicationContext(),"还未选择图片",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    Toast.makeText(getApplicationContext(),"开始上传",Toast.LENGTH_SHORT).show();
+                    final String uploadUrl = "http://192.168.11.666/lnmes/template?method=uploadQcImg";
                     RequestParams params = new RequestParams();
                     for (int i = 0; i < dataList.size() - 1; i++) {
                         params.put(i+"aa",new File(dataList.get(i)));
@@ -70,6 +75,7 @@ public class ChooseActivity extends BaseActivity {
                     RequestCenter.uploadFile(uploadUrl, params, new DisposeDataListener() {
                         @Override
                         public void onSuccess(Object responseObj) {
+                            Toast.makeText(getApplicationContext(),"上传结束",Toast.LENGTH_SHORT).show();
                             Toast.makeText(getApplicationContext(),responseObj.toString(),Toast.LENGTH_SHORT).show();
                         }
 

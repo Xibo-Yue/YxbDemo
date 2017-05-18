@@ -30,7 +30,7 @@
         android:background="#312E3F"/>
 
     <GridView
-        android:id="@+id/grid_upload_pictures" 
+        android:id="@+id/grid_upload_pictures"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/btn_change_fragment"
