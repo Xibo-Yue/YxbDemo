@@ -32,6 +32,10 @@ public class SelectPicPopupWindow extends PopupWindow {
 	 * 取消
 	 */
 	private Button cancelBtn;
+	/**
+	 * 百度大脑识别
+	 */
+	private Button ocr_ui;
 	private View mMenuView;
 
 	@SuppressLint("InflateParams")
@@ -43,10 +47,12 @@ public class SelectPicPopupWindow extends PopupWindow {
 		takePhotoBtn = (Button) mMenuView.findViewById(R.id.takePhotoBtn);
 		pickPhotoBtn = (Button) mMenuView.findViewById(R.id.pickPhotoBtn);
 		cancelBtn = (Button) mMenuView.findViewById(R.id.cancelBtn);
+		ocr_ui = (Button) mMenuView.findViewById(R.id.ocr_ui);
 		// 设置按钮监听
 		cancelBtn.setOnClickListener(itemsOnClick);
 		pickPhotoBtn.setOnClickListener(itemsOnClick);
 		takePhotoBtn.setOnClickListener(itemsOnClick);
+		ocr_ui.setOnClickListener(itemsOnClick);
 		
 		// 设置SelectPicPopupWindow的View
 		this.setContentView(mMenuView);

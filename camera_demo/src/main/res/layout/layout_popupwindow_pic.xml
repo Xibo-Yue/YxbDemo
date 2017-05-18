@@ -15,6 +15,20 @@
         android:orientation="vertical" >
 
         <Button
+            android:id="@+id/ocr_ui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dp"
+            android:background="#373447"
+            android:padding="10dp"
+            android:text="百度识别"
+            android:textColor="#CEC9E7"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/takePhotoBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

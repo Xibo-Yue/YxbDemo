@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-        <com.yuexibo.camera_demo.ocr.crop.CropView
+        <com.yuexibo.camera_demo.ocr.crop.FrameOverlayView
                 android:id="@+id/overlay_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
