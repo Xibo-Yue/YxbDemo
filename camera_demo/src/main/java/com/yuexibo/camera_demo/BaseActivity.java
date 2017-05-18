@@ -104,7 +104,7 @@ public class BaseActivity extends FragmentActivity {
 				}
 			}
 		});  
-		menuWindow.showAtLocation(findViewById(R.id.choose_layout), Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+		menuWindow.showAtLocation(findViewById(R.id.choose_layout), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
 	}
 	
 	/**

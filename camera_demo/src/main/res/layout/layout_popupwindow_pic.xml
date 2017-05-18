@@ -50,7 +50,7 @@
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
             android:layout_marginTop="20dp"
-            android:background="@android:color/white"
+            android:background="#ffffff"
             android:padding="10dp"
             android:text="取消"
             android:textColor="#373447"
