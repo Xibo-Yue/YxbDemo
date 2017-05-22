@@ -80,18 +80,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 data_bool = (data_bool ? false : true);
 
                 Collections.sort(mList, new Comparator<TestDate>() {
-                    /**
-                     *
-                     * @param lhs
-                     * @param rhs
-                     * @return an integer < 0 if lhs is less than rhs, 0 if they are
-                     *         equal, and > 0 if lhs is greater than rhs,比较数据大小时,这里比的是时间
-                     */
+
                     @Override
                     public int compare(TestDate lhs, TestDate rhs) {
                         Date date1 = stringToDate(lhs.getDate());
                         Date date2 = stringToDate(rhs.getDate());
-                        // 对日期字段进行升序，如果欲降序可采用after方法
                         if (date1.before(date2)) {
                             return (data_bool ? 1 : -1);
                         }
