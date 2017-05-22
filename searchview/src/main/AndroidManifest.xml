@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.yuexibo.searchview"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SwipeRefreshLayoutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ListPopupWindowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PopupMenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LinearLayoutCompatActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".RecyclerVIewDecorationActivityOne"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".RecyclerVIewDecorationActivityTwo"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".RecyclerVIewDecorationActivityThree"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ItemTouchHelperActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TextInputLayoutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SearchViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SearchViewActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar2"/>
+        <activity
+            android:name=".TransparentToolbarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".PaletteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PaletteActivity2"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
