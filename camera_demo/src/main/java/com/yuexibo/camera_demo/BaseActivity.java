@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-import com.yuexibo.camera_demo.ocr.camera.CameraActivity;
 import com.yuexibo.camera_demo.utils.SelectPicPopupWindow;
 
 import java.io.File;
@@ -101,7 +100,7 @@ public class BaseActivity extends FragmentActivity {
                     case R.id.cancelBtn:// 取消
                         break;
                     case R.id.ocr_ui: //百度大脑识别
-                        startActivity(new Intent(BaseActivity.this, CameraActivity.class));
+                        //startActivity(new Intent(BaseActivity.this, CameraActivity.class));
                         break;
                     default:
                         break;

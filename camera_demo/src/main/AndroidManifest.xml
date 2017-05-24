@@ -30,12 +30,6 @@
         </activity>
         <activity android:name=".ChooseFragmentActivity">
         </activity>
-        <activity
-            android:name=".ocr.camera.CameraActivity"
-            android:configChanges="screenSize|orientation"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
-
-        </activity>
     </application>
 
 </manifest>
