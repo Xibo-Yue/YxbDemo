@@ -2,9 +2,6 @@ package com.leanway.greendao.db;
 
 import com.leanway.greendao.application.GreendaoApp;
 import com.leanway.greendao.bean.City;
-import com.leanway.greendao.bean.CityDao;
-import com.leanway.greendao.bean.DaoMaster;
-import com.leanway.greendao.bean.DaoSession;
 
 import org.greenrobot.greendao.query.QueryBuilder;
 

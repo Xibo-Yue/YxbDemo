@@ -15,6 +15,7 @@ public class City {
     private String name;
     private int num;
 
+
     public int getNum() {
         return this.num;
     }
@@ -41,10 +42,5 @@ public class City {
     }
     @Generated(hash = 750791287)
     public City() {
-    }
-
-    public City(String name, int num) {
-        this.name = name;
-        this.num = num;
     }
 }

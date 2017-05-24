@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/custom_webview/custom_webview.iml" filepath="$PROJECT_DIR$/custom_webview/custom_webview.iml" />
       <module fileurl="file://$PROJECT_DIR$/eventbus_test/eventbus_test.iml" filepath="$PROJECT_DIR$/eventbus_test/eventbus_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/greendao/greendao.iml" filepath="$PROJECT_DIR$/greendao/greendao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_test/java_test.iml" filepath="$PROJECT_DIR$/java_test/java_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/jni_demo/jni_demo.iml" filepath="$PROJECT_DIR$/jni_demo/jni_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/js_bridge/js_bridge.iml" filepath="$PROJECT_DIR$/js_bridge/js_bridge.iml" />
       <module fileurl="file://$PROJECT_DIR$/js_to_android/js_to_android.iml" filepath="$PROJECT_DIR$/js_to_android/js_to_android.iml" />

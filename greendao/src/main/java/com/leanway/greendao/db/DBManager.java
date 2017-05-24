@@ -3,8 +3,6 @@ package com.leanway.greendao.db;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.leanway.greendao.bean.DaoMaster;
-
 
 /**
  * @author Xibo_Yue

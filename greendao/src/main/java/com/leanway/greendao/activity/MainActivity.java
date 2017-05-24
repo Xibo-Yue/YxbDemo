@@ -16,13 +16,8 @@ import android.widget.Toast;
 
 import com.leanway.greendao.R;
 import com.leanway.greendao.application.GreendaoApp;
-import com.leanway.greendao.bean.City;
-import com.leanway.greendao.bean.User;
-import com.leanway.greendao.db.DBCity;
-import com.leanway.greendao.db.DBUser;
 
 import java.lang.reflect.Method;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,9 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-        DBCity.insertCity(new City("北京",1));
-        DBCity.insertCity(new City("上海",2));
-        DBCity.insertCity(new City("广州",3));
+
     }
 
 
@@ -169,13 +162,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.insert_one:
-                DBUser.insertUser(new User("张三",12,true));
-                DBUser.insertUser(new User("李四",12,true));
+
                 break;
 
             case R.id.insert_more:
-                List<User> users = DBUser.queryUserList(12);
-                int i = 0;
+
                 break;
         }
     }
