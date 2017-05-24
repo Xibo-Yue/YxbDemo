@@ -31,7 +31,6 @@ public class DBHelper {
 
     /**
      * 取得DaoSession
-     *
      * @return
      */
     public static DaoSession getDaoSession() {
