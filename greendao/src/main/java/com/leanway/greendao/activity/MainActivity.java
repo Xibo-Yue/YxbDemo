@@ -16,8 +16,11 @@ import android.widget.Toast;
 
 import com.leanway.greendao.R;
 import com.leanway.greendao.application.GreendaoApp;
+import com.leanway.greendao.bean.User;
+import com.leanway.greendao.db.DBHelper;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -147,7 +150,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (menu != null) {
             if (menu.getClass().getSimpleName().equalsIgnoreCase("MenuBuilder")) {
                 try {
-                    Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                    Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible",
+                            Boolean.TYPE);
                     method.setAccessible(true);
                     method.invoke(menu, true);
                 } catch (Exception e) {
@@ -160,13 +164,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.insert_one:
-
+                DBHelper.getDaoSession().getUserDao().insert(new User("张三", 12, false));
                 break;
 
             case R.id.insert_more:
-
+                ArrayList<User> users = new ArrayList<User>();
+                for (int i = 0; i < 8000; i++) {
+                    User user = new User("张三"+i,10+i,true);
+                    users.add(user);
+                }
+                DBHelper.getDaoSession().getUserDao().insertInTx(users);
                 break;
         }
     }
