@@ -16,11 +16,14 @@ import android.widget.Toast;
 
 import com.leanway.greendao.R;
 import com.leanway.greendao.application.GreendaoApp;
+import com.leanway.greendao.bean.City;
+import com.leanway.greendao.bean.Head;
 import com.leanway.greendao.bean.User;
 import com.leanway.greendao.db.DBHelper;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -79,7 +82,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+        //creatDir();
+        initData();
 
+    }
+
+    /**
+     * 创建文件夹
+     */
+//    private void creatDir() {
+//        String status = Environment.getExternalStorageState();
+//        if (status.equals(Environment.MEDIA_MOUNTED)) {
+//            Toast.makeText(GreendaoApp.getInstance(),"有SD卡",Toast.LENGTH_SHORT).show();
+//            File file = new File(Environment.getExternalStorageDirectory().getPath()+"/aaa");
+//            Log.i("sd卡",file.getAbsolutePath());
+//            if (!file.exists()) {
+//                file.mkdirs();
+//            }
+//        } else {
+//            Toast.makeText(GreendaoApp.getInstance(),"没有SD卡",Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
+    private void initData() {
+        ArrayList<City> cities = new ArrayList<>();
+        cities.add(new City(null,"北京",1));
+        cities.add(new City(null,"上海",1));
+        cities.add(new City(null,"广州",1));
+        DBHelper.getDaoSession().getCityDao().insertInTx(cities);
+
+        ArrayList<Head> heads = new ArrayList<>();
+        heads.add(new Head(null,"头像1"));
+        heads.add(new Head(null,"头像2"));
+        heads.add(new Head(null,"头像3"));
+        heads.add(new Head(null,"头像4"));
+        heads.add(new Head(null,"头像5"));
+        DBHelper.getDaoSession().getHeadDao().insertInTx(heads);
     }
 
 
@@ -92,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSearchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         mSearchAutoComplete = (SearchView.SearchAutoComplete) mSearchView.findViewById(R.id
                 .search_src_text);
-        mSearchView.setQueryHint("搜索本地歌曲by code");
+        mSearchView.setQueryHint("搜索");
 
         //设置输入框提示文字样式
         mSearchAutoComplete.setHintTextColor(getResources().getColor(android.R.color.darker_gray));
@@ -166,17 +204,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.insert_one:
-                DBHelper.getDaoSession().getUserDao().insert(new User("张三", 12, false));
+                DBHelper.getDaoSession().getUserDao().insert(new User(null,"张三",12,false,1l,1l));
+                DBHelper.getDaoSession().getUserDao().insert(new User(null,"李四",13,false,2l,2l));
                 break;
 
             case R.id.insert_more:
-                ArrayList<User> users = new ArrayList<User>();
-                for (int i = 0; i < 8000; i++) {
-                    User user = new User("张三"+i,10+i,true);
-                    users.add(user);
-                }
-                DBHelper.getDaoSession().getUserDao().insertInTx(users);
+
                 break;
+            case R.id.search_part:
+                List<User> users = DBHelper.getDaoSession().getUserDao().queryBuilder().build().list();
+                int i = 0;
+                break;
+
         }
     }
 }

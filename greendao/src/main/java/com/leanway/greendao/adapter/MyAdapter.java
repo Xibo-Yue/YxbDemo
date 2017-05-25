@@ -64,8 +64,6 @@ public class MyAdapter extends BaseAdapter {
         viewHolder.name.setText(mList.get(position).getName());
         viewHolder.sex.setText((mList.get(position).getIsBoy()? "男" :"女"));
         viewHolder.age.setText(mList.get(position).getAge()+"");
-
-
         return convertView;
     }
 
