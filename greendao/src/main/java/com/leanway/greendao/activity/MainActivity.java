@@ -5,6 +5,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cities.add(new City(null,"北京",1));
         cities.add(new City(null,"上海",1));
         cities.add(new City(null,"广州",1));
-        DBHelper.getDaoSession().getCityDao().insertInTx(cities);
+        DBHelper.getDaoSession().getCityDao().insertOrReplaceInTx(cities);
 
         ArrayList<Head> heads = new ArrayList<>();
         heads.add(new Head(null,"头像1"));
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         heads.add(new Head(null,"头像3"));
         heads.add(new Head(null,"头像4"));
         heads.add(new Head(null,"头像5"));
-        DBHelper.getDaoSession().getHeadDao().insertInTx(heads);
+        DBHelper.getDaoSession().getHeadDao().insertOrReplaceInTx(heads);
     }
 
 
@@ -204,16 +205,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.insert_one:
-                DBHelper.getDaoSession().getUserDao().insert(new User(null,"张三",12,false,1l,1l));
-                DBHelper.getDaoSession().getUserDao().insert(new User(null,"李四",13,false,2l,2l));
+                User user = new User(null,"张三",12,false,1l,1l);
+                DBHelper.getDaoSession().getUserDao().insertOrReplace(user);
                 break;
 
             case R.id.insert_more:
 
                 break;
+
+            case R.id.delete_data:
+
+                break;
+
+            case R.id.update_data:
+
+                break;
+
+
             case R.id.search_part:
                 List<User> users = DBHelper.getDaoSession().getUserDao().queryBuilder().build().list();
-                int i = 0;
+
+                Log.i("user城市",users.get(0).getMCity().getName());
+                Log.i("user头像",users.get(0).getMHead().getHeadUrl());
                 break;
 
         }
