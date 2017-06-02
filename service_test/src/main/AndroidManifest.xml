@@ -23,6 +23,10 @@
             android:name=".MyService"
             android:process=":remote">
         </service>
+        <service
+            android:name=".LongRunningService">
+        </service>
+        <receiver android:name=".AlarmReceiver"/>
     </application>
 
 </manifest>
