@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/searchview" />
             <option value="$PROJECT_DIR$/service_test" />
             <option value="$PROJECT_DIR$/timepickdia" />
+            <option value="$PROJECT_DIR$/treeview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

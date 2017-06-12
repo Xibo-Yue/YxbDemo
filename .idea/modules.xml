@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/searchview/searchview.iml" filepath="$PROJECT_DIR$/searchview/searchview.iml" />
       <module fileurl="file://$PROJECT_DIR$/service_test/service_test.iml" filepath="$PROJECT_DIR$/service_test/service_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/timepickdia/timepickdia.iml" filepath="$PROJECT_DIR$/timepickdia/timepickdia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treeview/treeview.iml" filepath="$PROJECT_DIR$/treeview/treeview.iml" />
     </modules>
   </component>
 </project>
