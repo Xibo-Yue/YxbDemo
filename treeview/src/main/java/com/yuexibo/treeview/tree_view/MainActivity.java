@@ -31,7 +31,7 @@ public class MainActivity extends Activity
 		mTree = (ListView) findViewById(R.id.id_tree);
 		try
 		{
-			mAdapter = new SimpleTreeAdapter<Bean>(mTree, this, mDatas, 10);
+			mAdapter = new SimpleTreeAdapter<Bean>(mTree, this, mDatas, 0);
 			mAdapter.setOnTreeNodeClickListener(new TreeListViewAdapter.OnTreeNodeClickListener()
 			{
 				@Override

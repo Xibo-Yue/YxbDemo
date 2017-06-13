@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff" >
+
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <ListView
+            android:id="@+id/code_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:background="#ffffffff"
+            android:cacheColorHint="#ffffffff"
+            android:divider="@drawable/divider_list"
+            android:dividerHeight="2.0dip"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:fastScrollEnabled="true"
+            android:scrollbars="none"
+             />
+        
+    </RelativeLayout>
+
+</RelativeLayout>
