@@ -5,7 +5,6 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,12 +18,10 @@ import com.leanway.greendao.R;
 import com.leanway.greendao.application.GreendaoApp;
 import com.leanway.greendao.bean.City;
 import com.leanway.greendao.bean.Head;
-import com.leanway.greendao.bean.User;
 import com.leanway.greendao.db.DBHelper;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -205,9 +202,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.insert_one:
-                User user = new User(null,"张三",12,false,1l,1l);
-                DBHelper.getDaoSession().getUserDao().insertOrReplace(user);
-                break;
+
 
             case R.id.insert_more:
 
@@ -223,11 +218,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             case R.id.search_part:
-                List<User> users = DBHelper.getDaoSession().getUserDao().queryBuilder().build().list();
-
-                Log.i("user城市",users.get(0).getMCity().getName());
-                Log.i("user头像",users.get(0).getMHead().getHeadUrl());
-                break;
+              break;
 
         }
     }
