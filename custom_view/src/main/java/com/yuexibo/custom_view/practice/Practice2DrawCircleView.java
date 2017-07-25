@@ -11,6 +11,10 @@ import android.view.View;
 public class Practice2DrawCircleView extends View {
     Paint circlePaint;
 
+
+    private int with;
+    private int height;
+
     public Practice2DrawCircleView(Context context) {
         this(context, null);
     }
@@ -27,15 +31,27 @@ public class Practice2DrawCircleView extends View {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        with = MeasureSpec.getSize(widthMeasureSpec);
+        height = MeasureSpec.getSize(heightMeasureSpec);
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         canvas.drawCircle(160, 160, 50, circlePaint);  //X圆心坐标,Y圆心坐标,半径,画笔
+
+
         circlePaint.setStyle(Paint.Style.STROKE); //设置不填充
         canvas.drawCircle(290, 160, 50, circlePaint);
+
+
         circlePaint.setStyle(Paint.Style.FILL);   //设置填充
         circlePaint.setColor(Color.BLUE);
         canvas.drawCircle(160, 290, 50, circlePaint);
+
+
         circlePaint.setStyle(Paint.Style.STROKE);
         circlePaint.setStrokeWidth(20f);
         circlePaint.setColor(Color.BLACK);
