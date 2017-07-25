@@ -11,4 +11,8 @@
     <string name="title_draw_path">drawPath()</string>
     <string name="title_draw_histogram">直方图</string>
     <string name="title_draw_pie_chart">饼图</string>
+
+    <string name="arcto">arcto区别</string>
+    <string name="cwcww">pathfilltype</string>
+    <string name="bitmapAndText">bitmapAndText</string>
 </resources>
