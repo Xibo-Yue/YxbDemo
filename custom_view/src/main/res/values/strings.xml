@@ -1,18 +1,19 @@
 <resources>
-    <string name="app_name">Android绘制 1</string>
-    <string name="title_draw_color">drawColor()</string>
-    <string name="title_draw_circle">drawCircle()</string>
-    <string name="title_draw_rect">drawRect()</string>
-    <string name="title_draw_point">drawPoint()</string>
-    <string name="title_draw_oval">drawOval()</string>
-    <string name="title_draw_line">drawLine()</string>
-    <string name="title_draw_round_rect">drawRoundRect()</string>
-    <string name="title_draw_arc">drawArc()</string>
-    <string name="title_draw_path">drawPath()</string>
-    <string name="title_draw_histogram">直方图</string>
-    <string name="title_draw_pie_chart">饼图</string>
-
-    <string name="arcto">arcto区别</string>
-    <string name="cwcww">pathfilltype</string>
-    <string name="bitmapAndText">bitmapAndText</string>
+    <string name="app_name">HenCoder 绘制 2</string>
+    <string name="title_linear_gradient">LinearGradient</string>
+    <string name="title_radial_gradient">RadialGradient</string>
+    <string name="title_sweep_gradient">SweepGradient</string>
+    <string name="title_bitmap_shader">BitmapShader</string>
+    <string name="title_compose_shader">ComposeShader</string>
+    <string name="title_lighting_color_filter">LightingColorFilter</string>
+    <string name="title_color_matrix_color_filter">ColorMatrixColorFilter</string>
+    <string name="title_xfermode">setXfermode()</string>
+    <string name="title_stroke_cap">setStrokeCap()</string>
+    <string name="title_stroke_join">setStrokeJoin()</string>
+    <string name="title_stroke_miter">setStrokeMiter()</string>
+    <string name="title_path_effect">setPathEffect()</string>
+    <string name="title_shader_layer">setShadowLayer()</string>
+    <string name="title_mask_filter">setMaskFilter()</string>
+    <string name="title_fill_path">setFillPath()</string>
+    <string name="title_text_path">setTextPath()</string>
 </resources>
