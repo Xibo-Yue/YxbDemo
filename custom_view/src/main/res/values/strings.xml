@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HenCoder 绘制 2</string>
+    <string name="app_name">自定义View</string>
     <string name="title_linear_gradient">LinearGradient</string>
     <string name="title_radial_gradient">RadialGradient</string>
     <string name="title_sweep_gradient">SweepGradient</string>
