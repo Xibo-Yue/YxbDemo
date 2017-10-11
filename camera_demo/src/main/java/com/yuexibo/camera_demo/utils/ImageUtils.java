@@ -51,8 +51,7 @@ public class ImageUtils {
 		Cursor cursor = context.getContentResolver().query(uri, null, null,
 				null, null);
 		if (cursor.moveToFirst()) {
-			filePath = cursor.getString(cursor
-					.getColumnIndex(MediaStore.Images.Media.DATA));
+			filePath = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
 		}
 		cursor.close();
 		return filePath;
@@ -60,7 +59,6 @@ public class ImageUtils {
 
 	/**
 	 * 根据图片原始路径获取图片缩略图
-	 * 
 	 * @param imagePath 图片原始路径
 	 * @param width		缩略图宽度
 	 * @param height	缩略图高度
